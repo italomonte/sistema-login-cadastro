@@ -2,13 +2,6 @@ const router = require('express').Router()
 const User = require("../models/User")
 const jwt = require("jsonwebtoken")
 
-router.get('/list',checkToken, async (req, res) => {
-
-    const users = await User.find()
-
-    res.render('users/users.handlebars', {users: users})
-})
-
 function checkToken(req, res, next) {
 
     const token = req.cookies.token;
@@ -29,5 +22,21 @@ function checkToken(req, res, next) {
     }
 
 }
+
+
+
+router.get('/list',checkToken, async (req, res) => {
+
+    const users = await User.find()
+
+    res.render('users/users.handlebars', {users: users})
+})
+
+router.get('/:id', async (req, res)=> {
+    const id = req.params.id
+    const user = await User.findById(id, '-password')
+
+    res.render('users/user.handlebars', {user})
+})
 
 module.exports = router

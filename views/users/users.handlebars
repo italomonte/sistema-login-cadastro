@@ -1,10 +1,14 @@
 {{#each users}}
 
-    <div class="card mt-3 mb-1">
-        <div class="card-body">
+    <div class="card mt-3 mb-1" style="width: 60%; margin: 0 auto">
+        <div class="card-body" >
             <h4>{{username}}</h4>
             <hr>
-            <h5>{{email}}</h4>
+            <div style="display: flex; justify-content: space-between">
+                <h5>{{email}}</h4>
+                <a href="/users/{{_id}}"><button class="btn btn-success">Ver mais</button></a>
+            </div>
+
         </div>
     </div>
 
