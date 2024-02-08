@@ -1,0 +1,16 @@
+<div class="card">
+    <div class="card-body">
+        <h2>Create a Count!</h2>
+        <form action="/auth/register" method="POST">
+            <label for="username"  class="mt-3">Name: </label>
+                <input class="form-control mt-2" type="text" name="username" id="username" placeholder="Username" required> 
+            <label for="email" class="mt-3">Email: </label>
+                <input type="email" name="email" class="form-control mt-2" id="email" required>
+            <label for="password"  class="mt-3">Password: </label>
+                <input type="password" name="password" class="form-control mt-2" id="password" required>
+            <label for="passwordConfirmation"  class="mt-3">Repeat Password: </label>
+                <input type="password" name="passwordConfirmation" class="form-control mt-2" id="passwordConfirmation" required>
+            <button type="submit" class="btn btn-success mt-4">Create</button>
+        </form>
+    </div>
+</div>

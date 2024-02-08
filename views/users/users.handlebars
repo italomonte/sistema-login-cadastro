@@ -1,0 +1,13 @@
+{{#each users}}
+
+    <div class="card mt-3 mb-1">
+        <div class="card-body">
+            <h4>{{username}}</h4>
+            <hr>
+            <h5>{{email}}</h4>
+        </div>
+    </div>
+
+{{else}}
+    <h4>No one user registred.</h4>
+{{/each}}
