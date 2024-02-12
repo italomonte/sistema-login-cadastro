@@ -82,7 +82,7 @@ const password = process.env.USER_PASS;
 
 const PORT = process.env.PORT || 3335
 
-mongoose.connect(`mongodb+srv://${user}:${password}@cluster0.ltd1xgy.mongodb.net/?retryWrites=true&w=majority`)
+mongoose.connect(`mongodb+srv://italomonte:za8XrM9c9gUzD4O5@cluster0.ltd1xgy.mongodb.net/?retryWrites=true&w=majority`)
 .then(
     app.listen(PORT, () => { console.log(`Server On. http://localhost:${PORT}`) })
 )
