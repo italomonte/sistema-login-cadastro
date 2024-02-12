@@ -78,7 +78,9 @@ const app = express();
 const user = process.env.USER_NAME;
 const password = process.env.USER_PASS;
 
+const PORT = process.env.PORT || 3335
+
 mongoose.connect(`mongodb+srv://${user}:${password}@cluster0.ltd1xgy.mongodb.net/?retryWrites=true&w=majority`)
 .then(
-    app.listen(3333, () => { console.log("Server On. http://localhost:3333") })
+    app.listen(PORT, () => { console.log(`Server On. http://localhost:${PORT}`) })
 )
